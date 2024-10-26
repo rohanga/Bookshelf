@@ -35,13 +35,16 @@ The project is structured into two main folders: `frontend` and `backend`.
 ### Frontend
 - Contains all CSS and React code.
 - State management is implemented using Redux.
+- at root level do `npm i` 
 - To run the frontend project, navigate to the `frontend` directory and use:
   ```bash
   npm run start
 
 ### Backend
+- node version use 20
 - Contains all databases oprations.
 - index.js is main file in backend folder.
+- at root level do `npm i`
 - you have to create mongo database `bookshelf`
 - To run the backend project, navigate to the `backend` directory and use:
   ```bash
