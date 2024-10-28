@@ -9,8 +9,9 @@ const bookSchema = new mongoose.Schema({
   averageRating: Number,
   userRating: Number,
   userReview: String,
-  addedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // User who added the book to the bookshelf
+  addedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'users' }, // User who added the book to the bookshelf
   comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }],
 });
 
-module.exports = mongoose.model('Book', bookSchema);
+module.exports = mongoose.model('books', bookSchema);
+

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
   currentlyReading: [
     {
-      book: { type: mongoose.Schema.Types.ObjectId, ref: 'Book' },
+      book: { type: mongoose.Schema.Types.ObjectId, ref: 'books' }, // Ensure this matches the model name
       progress: { type: Number, default: 0 },
       comment: { type: String, default: '' }
     }
@@ -14,6 +14,4 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }, // Passwords should be hashed in production
 });
 
-module.exports = mongoose.model('User', userSchema);
-
-
+module.exports = mongoose.model('users', userSchema);
